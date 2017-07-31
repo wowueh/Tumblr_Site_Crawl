@@ -315,7 +315,7 @@ namespace TumblrSiteCrawl
                 string html = htmlTask.Result;
                 HtmlDocument doc = new HtmlDocument();
                 doc.LoadHtml(html);
-                if (doc.DocumentNode.SelectNodes("//@class[@class='post photo']") == null && doc.DocumentNode.SelectNodes("//@class[@class='photoset']") == null&& doc.DocumentNode.SelectNodes("//@class[@class='photo_wrap']") == null)
+                if (doc.DocumentNode.SelectNodes("//@class[@class='post photo']") == null && doc.DocumentNode.SelectNodes("//@class[@class='photoset']") == null&& doc.DocumentNode.SelectNodes("//@class[@class='photo_wrap']") == null&& doc.DocumentNode.SelectNodes("//@id[@id='photo']") == null)
                 {
                     if (endNum - startNum > 1)
                     {
